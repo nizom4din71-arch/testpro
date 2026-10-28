@@ -1,253 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nizomiddinning shaxsiy portfolio sayti">
+    <title>Nizomiddin | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>My portfolio</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1 class="nav__h1">Nizomiddin</h1>
-            <ul class="nav__ul">
-                <li class="nav__li"></li>
-                <nav class="footer-nav">
-                    <a href="#about">Men haqimda</a>
-                    <a href="#skills">Ko'nikmalar</a>
-                    <a href="#team">Jamoa</a>
-                    <a href="#future">Kelajak</a>
-                    <a href="#contact">Aloqa</a>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Nizomiddin<span>.</span></a>
+            <button class="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#skills">Ko'nikmalar</a></li>
+                <li><a href="#projects">Loyihalar</a></li>
+                <li><a href="#team">Oilam</a></li>
+                <li><a href="#contact">Aloqa</a></li>
             </ul>
+            <a href="#contact" class="nav-cta">Bog'lanish <span>↗</span></a>
         </nav>
-        <section>
-            <div class="div__section">
-                <div class="hero-box">
-                    <h3 class="hero-tex">Welcome to my portfolio</h3>
-                    <p class="hero__text">
-                        Mening ismim Nizomiddin. Men dasturlash,web texnologiyalar va <br>
-                        zamonaviy dizayinlarga qiziqaman. Hozirda Frontend yonalishini organmoqdaman. <br>
-                        HTML va CSS yordammida turli xil web loyihalatar yaratib, o'z tajribamni oshirvoman.
-                    </p>
-                    <div class="card_front">
-                        <p></p>
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <img class="nav__img" src="./img.jpg" alt="">
-            </div>
-        </section>
-        <section class="about">
-            <p class="subtitle">About me</p>
-            <div class="about-text">
-                <p>Salom mening ismim Nizomiddin. Man 14 yoshdaman va man 61-maktabning <br>
-                    8-sinfida oqiyman. Man juadayam dasuturlashga qiziqaman va hozirda pdp juniorda oqivoman. <br>
-                    Mani kelajakdagi maqsadim proffesional darajadagi dasturchi bolish.</p>
-            </div>
-        </section>
-
-        <div class="about-cards">
-            <div class="about-card">
-                <span class="card-icon">🎓</span>
-                <span class="card-label">Oqish</span>
-                <h3>IT</h3>
-            </div>
-
-            <div class="about-card">
-                <span class="card-icon">💻</span>
-                <span class="card-label">Yonalish</span>
-                <h3>Frontend</h3>
-            </div>
-
-            <div class="about-card">
-                <span class="card-icon">👨‍💻</span>
-                <span class="card-label">Maqsadim</span>
-                <h3>Dasturchi</h3>
-            </div>
-
-            <div class="about-card">
-                <span class="card-icon">🫆</span>
-                <span class="card-label">Qiziqish</span>
-                <h3>Web Development & Coding</h3>
-            </div>
-        </div>
-        </div>
-        <section class="skills">
-            <h1 class="card_h1">Nimalarni bilaman?</h1>
-
-            <div class="skills-container">
-
-                <div class="card">
-                    <div class="icon">HTML</div>
-                    <h2>HTML</h2>
-                    <p>Web sahifalarning tuzilishini yaratish <br>
-                        va kontentni joylashtirish uchun ishlatiladigan asosiy til.</p>
-                    <div class="progress">
-                        <span style="width: 50%"></span>
-                    </div>
-                    <div class="percent">50%</div>
-                </div>
-
-                <div class="card">
-                    <div class="icon">CSS</div>
-                    <h2>CSS</h2>
-                    <p>Saytni korinishi dizaynini va animatsiyalarini boshqarish uchun
-                        ishlatiladigan asosiy til.</p>
-                    <div class="progress">
-                        <span style="width: 50%"></span>
-                    </div>
-                    <div class="percent">50%</div>
-                </div>
-
-                <div class="card">
-                    <div class="icon">JS</div>
-                    <h2>JavaScript</h2>
-                    <p>Javascriptni shunchaki organish emas, unda murakkab
-                        va foydali loyihalar yaratish asosiy rejam.</p>
-                    <div class="progress">
-                        <span style="width: 5%"></span>
-                    </div>
-                    <div class="percent">0%</div>
-                </div>
-            </div>
-            <section class="projects">
-                <p class="subtitle-set">My project</p>
-
-                <a href="https://project-pi-seven-19.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img class="img-sec" src="./image.png" alt="NFT Marketplace">
-                            <span class="number">1</span>
-                        </div>
-
-                        <div class="project-info">
-                            <p class="category">WEB DEVELOPMENT</p>
-                            <h2>NFT Marketplace</h2>
-                            <p class="description">
-                                Zamonaviy NFT Marketplace web sayti.
-                            </p>
-                        </div>
-                    </div>
-
-                </a>
-            </section>
-        </section>
-        <section>
-            <div class="h1-div">
-                <h1 class="group-h1">Mening guruhim</h1>
-
-            </div>
-            <div class="carousel">
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Abdulloh</div>
-                        <div class="num">01</div>
-                        <img src="./Abdulloh.png" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Abduqodir</div>
-                        <div class="num">02</div>
-                        <img src="./Abduqodir.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Abdurahmon</div>
-                        <div class="num">03</div>
-                        <img src="./Abdurahmon.png" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Anvar</div>
-                        <div class="num">04</div>
-                        <img src="./Anvar.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Islomjon</div>
-                        <div class="num">05</div>
-                        <img src="./islomjon.png" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Jahongir</div>
-                        <div class="num">06</div>
-                        <img src="./Jahongir.png" alt="">
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Karimbek</div>
-                        <div class="num">07</div>
-                        <img src="./Karimbek.jpg" alt="">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Muhammadamin</div>
-                        <div class="num">08</div>
-                        <img src="./Muhammadamin.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Abdulloh</div>
-                        <div class="num">09</div>
-                        <img src="./Abdulloh1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-box">
-                        <div class="title">Shoxruh</div>
-                        <div class="num">10</div>
-                        <img src="./shoxruh.png" alt="">
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-
-
-        <section class="contact">
-            <form class="contact-form">
-                <h1 class="contact__h1">MEN BILAN BOG`LANISH</h1>
-                <form class="form">
-                    <input placeholder="Enter your name" class="input" type="text">
-                    <input placeholder="Enter your email" class="input" type="text">
-                    <input placeholder="*********" class="input" type="password">
-
-                    <button>Submit</button>
-                </form>
-        </section>
-
-
-        <footer class="portfolio-footer">
-            <div class="footer-info">
-                <h2>Nizomiddin</h2>
-                <p>Portfoliongga tashrif buyurganingiz uchun rahmat.</p>
-                <p>© 2026 Nizomiddin. Barcha huquqlar himoyalangan.</p>
-            </div>
-
-
-            </nav>
-        </footer>
-
     </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> SALOM, MEN NIZOMIDDIN</p>
+                <h1>Men kelajakdagi <span class="gradient-text">Frontend</span> dasturchiman.</h1>
+                <p class="hero-text">Men dasturlash, web texnologiyalar va zamonaviy dizaynlarga qiziqaman. HTML, CSS va
+                    JavaScript yordamida yangi loyihalar yaratib, tajribamni oshiryapman.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Loyihalarim <span>↗</span></a>
+                    <a href="#about" class="btn btn-secondary">Men haqimda</a>
+                </div>
+                <div class="hero-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <div class="hero-note"><span class="status-dot"></span> Doim o'rganishda va rivojlanishda</div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="visual-grid"></div>
+                <div class="hero-image">
+                    <img src="./img.jpg" alt="Nizomiddinning rasmi">
+                </div>
+                <div class="floating-card floating-code">
+                    <span class="code-icon">⌘</span>
+                    <div><strong>Clean code</strong><small>Har bir detal muhim</small></div>
+                </div>
+                <div class="floating-card floating-role">
+                    <span class="role-icon">✦</span>
+                    <div><strong>Frontend</strong><small>Developer in progress</small></div>
+                </div>
+                <div class="visual-index">01 <span>/ PORTFOLIO</span></div>
+            </div>
+        </section>
+
+        <section class="section container" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">MEN HAQIMDA</p>
+                <h2>Qiziqishdan <span class="gradient-text">maqsad sari.</span></h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Salom, mening ismim Nizomiddin. Men 61-maktabning 8-sinfida o'qiyman va PDP Junior'da tahsil
+                        olyapman. Dasturlashga juda qiziqaman.</p>
+                    <p>Hozirda Frontend yo'nalishida bilimlarimni rivojlantiryapman. Maqsadim — professional dasturchi
+                        bo'lish va foydali, chiroyli loyihalar yaratish.</p>
+                    <a class="text-link" href="#contact">Men bilan bog'laning <span>↗</span></a>
+                </div>
+
+                <div class="about-cards">
+                    <article class="about-card"><span class="card-icon">✳</span>
+                        <p>Ta'lim</p>
+                        <h3>PDP Junior</h3><span class="card-number">01</span>
+                    </article>
+                    <article class="about-card"><span class="card-icon">⌘</span>
+                        <p>Yo'nalish</p>
+                        <h3>Frontend</h3><span class="card-number">02</span>
+                    </article>
+                    <article class="about-card"><span class="card-icon">◎</span>
+                        <p>Maqsadim</p>
+                        <h3>Dasturchi bo'lish</h3><span class="card-number">03</span>
+                    </article>
+                    <article class="about-card"><span class="card-icon">↗</span>
+                        <p>Qiziqish</p>
+                        <h3>Web Development</h3><span class="card-number">04</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section section" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">MENING BILIMLARIM</p>
+                    <h2>O'rganayotgan <span class="gradient-text">texnologiyalar.</span></h2>
+                    <p class="section-description">Har kuni yangi bilim va ko'nikmalarni o'zlashtiryapman.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-top"><span class="skill-icon html-icon">5</span><span class="skill-label">01 /
+                                MARKUP</span></div>
+                        <h3>HTML</h3>
+                        <p>Web sahifalarning tuzilishi va kontentini tartibli yaratish.</p>
+                        <div class="skill-progress"><span style="width:50%"></span></div>
+                        <div class="skill-bottom"><span>O'rganish jarayonida</span><strong>50%</strong></div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-top"><span class="skill-icon css-icon">3</span><span class="skill-label">02 /
+                                STYLING</span></div>
+                        <h3>CSS</h3>
+                        <p>Sayt dizayni, ranglar, joylashuv va animatsiyalar bilan ishlash.</p>
+                        <div class="skill-progress"><span style="width:50%"></span></div>
+                        <div class="skill-bottom"><span>O'rganish jarayonida</span><strong>50%</strong></div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-top"><span class="skill-icon js-icon">JS</span><span class="skill-label">03 /
+                                INTERACTION</span></div>
+                        <h3>JavaScript</h3>
+                        <p>Web sahifalarga interaktivlik va foydali funksiyalar qo'shish.</p>
+                        <div class="skill-progress"><span style="width:5%"></span></div>
+                        <div class="skill-bottom"><span>Endi boshlayapman</span><strong>5%</strong></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">MENING ISHLARIM</p>
+                <h2>Tanlangan <span class="gradient-text">loyiha.</span></h2>
+                <p class="section-description">O'rgangan bilimlarim yordamida yaratgan web loyiham.</p>
+            </div>
+
+            <a href="https://project-pi-seven-19.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-card">
+                <div class="project-image">
+                    <img src="./image.png" alt="NFT Marketplace loyihasi">
+                    <span class="project-number">PROJECT / 01</span>
+                    <span class="project-open">↗</span>
+                </div>
+                <div class="project-info">
+                    <p class="project-category">WEB DEVELOPMENT</p>
+                    <h3>NFT Marketplace</h3>
+                    <p>Zamonaviy dizaynga ega NFT Marketplace web sayti. Ushbu loyiha orqali web sahifalar yaratish
+                        bo'yicha tajribamni oshiryapman.</p>
+                    <div class="project-bottom">
+                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                        <span class="project-link">Loyihani ko'rish ↗</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section class="family-section section" id="team">
+            <div class="container">
+                <div class="section-heading family-heading">
+                    <p class="eyebrow">MENING ENG YAQINLARIM</p>
+                    <h2>Oilam — mening <span class="gradient-text">tayanchim.</span></h2>
+                    <p class="section-description">Hayotimdagi eng qadrli insonlar — mening oilam.</p>
+                </div>
+
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <article class="team-card"><img src="./family/father.jpg" alt="Ota">
+                            <div class="team-info"><span>01 / OILA</span>
+                                <h3>Otam</h3>
+                                <p>Oilamiz tayanchi</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/mother.jpg" alt="Ona">
+                            <div class="team-info"><span>02 / OILA</span>
+                                <h3>Onam</h3>
+                                <p>Mehr va g'amxo'rlik</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/me.jpg" alt="Men">
+                            <div class="team-info"><span>03 / OILA</span>
+                                <h3>Men</h3>
+                                <p>Nizomiddin</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/member-4.jpg" alt="Oila a'zosi 4">
+                            <div class="team-info"><span>04 / OILA</span>
+                                <h3>Akam</h3>
+                                <p>Doim yonimda</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/member-5.jpg" alt="Oila a'zosi 5">
+                            <div class="team-info"><span>05 / OILA</span>
+                                <h3>Opam</h3>
+                                <p>Mehribon va yaqin</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/member-6.jpg" alt="Oila a'zosi 6">
+                            <div class="team-info"><span>06 / OILA</span>
+                                <h3>Ukam</h3>
+                                <p>Quvonchimiz</p>
+                            </div>
+                        </article>
+                        <article class="team-card"><img src="./family/member-7.jpg" alt="Oila a'zosi 7">
+                            <div class="team-info"><span>07 / OILA</span>
+                                <h3>Singlim</h3>
+                                <p>Oilamiz quvonchi</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button type="button" class="carousel-btn prev-btn" aria-label="Oldingi oila a'zosi">←</button>
+                    <div class="carousel-status">
+                        <span class="carousel-count">01 / 07</span>
+                        <div class="carousel-progress"><span></span></div>
+                    </div>
+                    <button type="button" class="carousel-btn next-btn" aria-label="Keyingi oila a'zosi">→</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container contact-section" id="contact">
+            <div class="contact-intro">
+                <p class="eyebrow">ALOQA</p>
+                <h2>Keling, <span class="gradient-text">bog'lanamiz.</span></h2>
+                <p>Savolingiz yoki taklifingiz bo'lsa, menga xabar yozing.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Ismingiz</label>
+                        <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email manzilingiz</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Xabaringiz</label>
+                    <textarea id="message" name="message" placeholder="Xabaringizni yozing..." rows="5"
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Xabar yuborish <span>↗</span></button>
+                <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <a href="#home" class="logo">Nizomiddin<span>.</span></a>
+                <p>Portfolio saytimga tashrif buyurganingiz uchun rahmat.</p>
+            </div>
+            <p class="copyright">© 2026 Nizomiddin. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
     <script src="./app.js"></script>
 </body>
 

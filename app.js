@@ -1,94 +1,84 @@
-/*--------------------
-Vars
---------------------*/
-let progress = 50
-let startX = 0
-let active = 0
-let isDown = false
+const track = document.querySelector(".carousel-track");
+const cards = [...document.querySelectorAll(".team-card")];
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const counter = document.querySelector(".carousel-count");
+const progress = document.querySelector(".carousel-progress span");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-/*--------------------
-Contants
---------------------*/
-const speedWheel = 0.02
-const speedDrag = -0.1
+let activeIndex = 0;
 
-/*--------------------
-Get Z
---------------------*/
-const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
-
-/*--------------------
-Items
---------------------*/
-const $items = document.querySelectorAll('.carousel-item')
-const $cursors = document.querySelectorAll('.cursor')
-
-const displayItems = (item, index, active) => {
-  const zIndex = getZindex([...$items], active)[index]
-  item.style.setProperty('--zIndex', zIndex)
-  item.style.setProperty('--active', (index-active)/$items.length)
+function getVisibleCards() {
+  if (window.innerWidth <= 650) return 1;
+  if (window.innerWidth <= 900) return 2;
+  return 3;
 }
 
-/*--------------------
-Animate
---------------------*/
-const animate = () => {
-  progress = Math.max(0, Math.min(progress, 100))
-  active = Math.floor(progress/100*($items.length-1))
-  
-  $items.forEach((item, index) => displayItems(item, index, active))
-}
-animate()
+function updateCarousel() {
+  if (!track || !cards.length) return;
 
-/*--------------------
-Click on Items
---------------------*/
-$items.forEach((item, i) => {
-  item.addEventListener('click', () => {
-    progress = (i/$items.length) * 100 + 10
-    animate()
-  })
-})
+  const visibleCards = getVisibleCards();
+  const maxIndex = Math.max(0, cards.length - visibleCards);
 
-/*--------------------
-Handlers
---------------------*/
-const handleWheel = e => {
-  const wheelProgress = e.deltaY * speedWheel
-  progress = progress + wheelProgress
-  animate()
+  activeIndex = Math.min(activeIndex, maxIndex);
+
+  const cardWidth = cards[0].getBoundingClientRect().width;
+  const gap = parseFloat(getComputedStyle(track).gap) || 0;
+  const offset = activeIndex * (cardWidth + gap);
+
+  track.style.transform = `translateX(-${offset}px)`;
+
+  prevBtn.disabled = activeIndex === 0;
+  nextBtn.disabled = activeIndex >= maxIndex;
+
+  counter.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(cards.length).padStart(2, "0")}`;
+
+  progress.style.width = `${((activeIndex + 1) / cards.length) * 100}%`;
 }
 
-const handleMouseMove = (e) => {
-  if (e.type === 'mousemove') {
-    $cursors.forEach(($cursor) => {
-      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
-    })
+nextBtn.addEventListener("click", () => {
+  const maxIndex = Math.max(0, cards.length - getVisibleCards());
+
+  if (activeIndex < maxIndex) {
+    activeIndex++;
+    updateCarousel();
   }
-  if (!isDown) return
-  const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
-  const mouseProgress = (x - startX) * speedDrag
-  progress = progress + mouseProgress
-  startX = x
-  animate()
-}
+});
 
-const handleMouseDown = e => {
-  isDown = true
-  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
-}
+prevBtn.addEventListener("click", () => {
+  if (activeIndex > 0) {
+    activeIndex--;
+    updateCarousel();
+  }
+});
 
-const handleMouseUp = () => {
-  isDown = false
-}
+window.addEventListener("resize", updateCarousel);
 
-/*--------------------
-Listeners
---------------------*/
-document.addEventListener('mousewheel', handleWheel)
-document.addEventListener('mousedown', handleMouseDown)
-document.addEventListener('mousemove', handleMouseMove)
-document.addEventListener('mouseup', handleMouseUp)
-document.addEventListener('touchstart', handleMouseDown)
-document.addEventListener('touchmove', handleMouseMove)
-document.addEventListener('touchend', handleMouseUp)
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+const contactForm = document.querySelector("#contact-form");
+const formMessage = document.querySelector("#form-message");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  formMessage.textContent = "Forma demo rejimida. Xabar serverga yuborilmadi.";
+
+  contactForm.reset();
+});
+
+updateCarousel();
