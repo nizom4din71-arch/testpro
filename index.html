@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My project</title>
+    <title>My portfolio</title>
 </head>
-
 <body>
     <header>
         <nav>
@@ -15,23 +14,24 @@
             <ul class="nav__ul">
                 <li class="nav__li"></li>
                 <nav class="footer-nav">
-                <a href="#about">Men haqimda</a>
-                <a href="#family">Oilam</a>
-                <a href="#skills">Ko'nikmalar</a>
-                <a href="#team">Jamoa</a>
-                <a href="#future">Kelajak</a>
-                <a href="#contact">Aloqa</a>
+                    <a href="#about">Men haqimda</a>
+                    <a href="#skills">Ko'nikmalar</a>
+                    <a href="#team">Jamoa</a>
+                    <a href="#future">Kelajak</a>
+                    <a href="#contact">Aloqa</a>
             </ul>
         </nav>
         <section>
             <div class="div__section">
-
                 <div class="hero-box">
-                    <h1>Welcome to my portfolio</h1>
-                    <h3>Hello my name is Nizomiddin</h3>
+                    <h3 class="hero-tex">Welcome to my portfolio</h3>
+                    <p class="hero__text">
+                        Mening ismim Nizomiddin. Men dasturlash,web texnologiyalar va <br>
+                        zamonaviy dizayinlarga qiziqaman. Hozirda Frontend yonalishini organmoqdaman. <br>
+                        HTML va CSS yordammida turli xil web loyihalatar yaratib, o'z tajribamni oshirvoman.
+                    </p>
                     <div class="card_front">
-                        <p>At the moment, I am studying in PDP Junior. <br>
-                            In the future I want to work professionally on websites such as HTML, CSS, JS.</p>
+                        <p></p>
                         <img src="" alt="">
                     </div>
                 </div>
@@ -43,8 +43,9 @@
             <div class="about-text">
                 <p>Mening ismim <b>Nizomiddin</b>. Men dasturlash, web texnologiyalar va zamonaviy dizaynlarga
                     qiziqaman.</p>
-                <p>Hozirda Frontend yo‘nalishini o‘rganmoqdaman. HTML va CSS yordamida turli xil web loyihalar yaratib,
-                    o‘z tajribamni oshiryapman.</p>
+                <p>Salom mening ismim Nizomiddin. Man 14 yoshdaman va man 61-maktabning <br>
+                    8-sinfida oqiyman. Man juadayam itga qiziqaman va hozirda pdp juniorda oqivoman. <br>
+                 Mani kelajakdagi maqsadim proffesional darajadagi dasturchi bolish.</p>
             </div>
         </section>
 
@@ -85,7 +86,7 @@
                     <p>Web sahifalarning tuzilishini yaratish <br>
                         va kontentni joylashtirish uchun ishlatiladigan asosiy til.</p>
                     <div class="progress">
-                        <span style="width: 100%"></span>
+                        <span style="width: 50%"></span>
                     </div>
                     <div class="percent">50%</div>
                 </div>
@@ -96,7 +97,7 @@
                     <p>Saytni korinishi dizaynini va animatsiyalarini boshqarish uchun
                         ishlatiladigan asosiy til.</p>
                     <div class="progress">
-                        <span style="width: 100%"></span>
+                        <span style="width: 50%"></span>
                     </div>
                     <div class="percent">50%</div>
                 </div>
@@ -118,9 +119,7 @@
                 <a href="https://project-pi-seven-19.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <div class="project-card">
                         <div class="project-image">
-                            <img class="img-sec"
-                                src="https://www.figma.com/design/vEL7uSSGyH6sHnriHpLEID/Crypto-Landing-Page-UI--Community-?node-id=0-1&p=f&t=Z0nDVbrQHerogm5N-0"
-                                alt="NFT Marketplace">
+                            <img class="img-sec" src="./image.png" alt="NFT Marketplace">
                             <span class="number">1</span>
                         </div>
 
@@ -137,8 +136,9 @@
             </section>
         </section>
         <section>
-
+            <h1 class="group-h1">Mening guruhim</h1>
             <div class="carousel">
+
                 <div class="carousel-item">
                     <div class="carousel-box">
                         <div class="title">Abdulloh</div>
@@ -162,7 +162,7 @@
                         <img src="./Abdurahmon.png" alt="">
                     </div>
                 </div>
-                
+
                 <div class="carousel-item">
                     <div class="carousel-box">
                         <div class="title">Anvar</div>
@@ -219,38 +219,19 @@
             </div>
         </section>
 
-        <section class="contact-header">
-            <div class="bg-lines">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-            </div>
-            <h1>Men bilan bog`lanish</h1>
-        </section>
+
 
         <section class="contact">
             <form class="contact-form">
-                <div class="input-row">
-                    <input type="text" placeholder="Ismingiz" required>
-                    <input type="email" placeholder="Emailingiz" required>
-                </div>
+                <h1 class="contact__h1">MEN BILAN BOG`LANISH</h1>
+                <form class="form">
+                    <input placeholder="Enter your name" class="input" type="text">
+                    <input placeholder="Enter your email" class="input" type="text">
+                    <input placeholder="*********" class="input" type="password">
 
-                <input type="text" placeholder="Mavzu" required>
-
-                <textarea placeholder="Xabaringizni yozing..." required></textarea>
-
-                <button type="submit">
-                    Xabar yuborish
-                    <!-- <i class="fa-solid fa-right-long"></i> -->
-                </button>
-            </form>
-            <div class="bg-lines">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-            </div>
+                    <button>Submit</button>
+                </form>
         </section>
-
 
 
         <footer class="portfolio-footer">
@@ -260,11 +241,12 @@
                 <p>© 2026 Nizomiddin. Barcha huquqlar himoyalangan.</p>
             </div>
 
-            
+
             </nav>
         </footer>
 
     </header>
     <script src="./app.js"></script>
 </body>
+
 </html>
