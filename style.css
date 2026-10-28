@@ -55,7 +55,7 @@ a {
 }
 
 .hero-tex {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
 }
 
@@ -76,6 +76,7 @@ p {
 
 .nav__img {
     width: 500px;
+    border-radius: 10px;
 }
 
 .about {
@@ -781,9 +782,6 @@ h1 {
     color: #777;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {}
-
 .contact-form button {
     margin-top: 50px;
     height: 60px;
@@ -997,76 +995,84 @@ h1 {
     gap: 10px;
     padding: 20px;
     background: linear-gradient(to bottom, aqua, aqua;
-    border-radius: 10px;
-    overflow: hidden;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transform: rotateX(-10deg);
-    transition: all 0.3s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    animation: form-animation 0.5s ease-in-out;
-}
-
-@keyframes form-animation {
-    from {
-        transform: rotateX(-30deg);
-        opacity: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transform: rotateX(-10deg);
+            transition: all 0.3s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            animation: form-animation 0.5s ease-in-out;
     }
 
-    to {
-        transform: rotateX(0deg);
-        opacity: 1;
+    @keyframes form-animation {
+        from {
+            transform: rotateX(-30deg);
+            opacity: 0;
+        }
+
+        to {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
     }
-}
 
-.input {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: transparent;
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    color: rgb(255, 255, 255);
-    border: 2px solid aqua;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
+    .input {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: transparent;
+        transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        color: rgb(255, 255, 255);
+        border: 2px solid aqua;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 
-.input::placeholder {
-    color: #fff;
-}
+    .input::placeholder {
+        color: #fff;
+    }
 
-.input:hover,
-.input:focus {
-    border-color: aqua;
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05) rotateY(20deg);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    outline: none;
-}
+    .input:hover,
+    .input:focus {
+        border-color: aqua;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05) rotateY(20deg);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        outline: none;
+    }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: aqua;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    transform: rotateX(-10deg);
-    transition: all 0.3s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: aqua;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transform: rotateX(-10deg);
+        transition: all 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 
-button:hover {
-    background-color: aqua;
-    font-size: 17px;
-    transform: scale(1.05) rotateY(20deg) rotateX(10deg);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
+    button:hover {
+        background-color: aqua;
+        font-size: 17px;
+        transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 
-.contact__h1 {
-    text-align: center;
-}
+    .contact__h1 {
+        text-align: center;
+    }
 
+    .group_h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h1-div {
+        text-align: center;
+    }
